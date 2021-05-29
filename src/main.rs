@@ -8,7 +8,7 @@ fn main() {
     let day = now.day();
     let youbi = Youbi::from(now.weekday());
     println!(
-        "{}{}日{}",
+        "{}{}日({})",
         month,
         day.to_lowercase_ten_thousand(ChineseVariant::Traditional),
         youbi
