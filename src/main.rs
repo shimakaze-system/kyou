@@ -1,5 +1,5 @@
-use chinese_number::*;
-use chrono::prelude::*;
+use chinese_number::{ChineseNumber, ChineseVariant};
+use chrono::prelude::{Datelike, Local};
 use kyou::{Tsuki, Youbi};
 
 fn main() {
