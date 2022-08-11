@@ -1,6 +1,5 @@
-use chrono::Weekday;
 use std::fmt;
-use Weekday::*;
+use time::Weekday;
 use Youbi::*;
 
 pub enum Youbi {
@@ -16,13 +15,13 @@ pub enum Youbi {
 impl From<Weekday> for Youbi {
     fn from(weekday: Weekday) -> Self {
         match weekday {
-            Mon => Getsuyoubi,
-            Tue => Kayoubi,
-            Wed => Suiyoubi,
-            Thu => Mokuyoubi,
-            Fri => Kinyoubi,
-            Sat => Doyoubi,
-            Sun => Nichiyoubi,
+            Weekday::Monday => Getsuyoubi,
+            Weekday::Tuesday => Kayoubi,
+            Weekday::Wednesday => Suiyoubi,
+            Weekday::Thursday => Mokuyoubi,
+            Weekday::Friday => Kinyoubi,
+            Weekday::Saturday => Doyoubi,
+            Weekday::Sunday => Nichiyoubi,
         }
     }
 }
